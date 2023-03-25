@@ -20,9 +20,14 @@ end)
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LiverMods/SuPray/main/legends"))()
 else
+local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://2323663829"
+Sound:Play()
+
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Error";
-	Text = "Unsupported Game";
-    Duration = 100; })
+	Text = "outdated script";
+    Duration = 260;
+})
 end
 end)
