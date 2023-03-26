@@ -1,33 +1,5 @@
 task.spawn(function()
-
-
-  --[ Adicionar o bloco ]
-Part = Instance.new("Part", workspace)
-
---[ Tamanho e localização ]
-Part.Size = Vector3.new(999999999999999999999999999, 0.51, 999999999999999999999999999)
-Part.CFrame = CFrame.new(405, 390, -497)
-
---[ Colisão ]
-Part.CanCollide = true
-Part.Anchored = true
-
---[ Cor e Material ]
-Part.Material = "Grass"
-Part.BrickColor = BrickColor(0, 255, 0)
-end)
-
---[ teleporte até o bloco ]
-spawn(function()
-task.wait(0.8)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(405, 396, -497)
-end)
-
-
-
-
   
-
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/ui%20lib%20fix.lua"))()
 
 
@@ -314,6 +286,33 @@ end)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
     end)     
     OthSection:NewButton("Anti - lag", "reduces lag", function()
+
+
+  --[ Adicionar o bloco ]
+task.spawn(function()
+Part = Instance.new("Part", workspace)
+
+--[ Tamanho e localização ]
+Part.Size = Vector3.new(999999999999999999999999999, 0.51, 999999999999999999999999999)
+Part.CFrame = CFrame.new(405, 390, -497)
+
+--[ Colisão ]
+Part.CanCollide = true
+Part.Anchored = true
+
+--[ Cor e Material ]
+Part.Material = "Grass"
+end)
+
+--[ teleporte até o bloco ]
+spawn(function()
+task.wait(0.8)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(405, 396, -497)
+end)
+
+
+
+
 task.spawn(function()
 local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
 local g = game
