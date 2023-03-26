@@ -285,7 +285,7 @@ end)
     OthSection:NewButton("Infinite Yield", "admins command", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
     end)     
-    OthSection:NewButton("Anti - lag", "reduces lag", function()
+    OthSection:NewButton("Anti-lag", "reduces lag", function()
 
 
   --[ Adicionar o bloco ]
@@ -302,14 +302,13 @@ Part.Anchored = true
 
 --[ Cor e Material ]
 Part.Material = "Grass"
-end)
+
 
 --[ teleporte até o bloco ]
-spawn(function()
+
 task.wait(0.8)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(405, 396, -497)
 end)
-
 
 
 
@@ -357,7 +356,8 @@ task.spawn(function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LiverMods/--script/main/Bob"))()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/littlegui/main/FPS-Counter'))()
  end)
-end)     
+end)    
+ 
  OthSection:NewButton("Keyboard", "And Used A Lot On Mobile", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
     end)    
