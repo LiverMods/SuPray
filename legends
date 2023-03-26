@@ -23,54 +23,13 @@ task.wait(0.8)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(405, 396, -497)
 end)
 
-task.spawn(function()
-local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
-local g = game
-local w = g.Workspace
-local l = g.Lighting
-local t = w.Terrain
-t.WaterWaveSize = 0
-t.WaterWaveSpeed = 0
-t.WaterReflectance = 0
-t.WaterTransparency = 0
-l.GlobalShadows = false
-l.FogEnd = 9e9
-l.Brightness = 0
-settings().Rendering.QualityLevel = "Level01"
-for i, v in pairs(g:GetDescendants()) do
-    if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
-        v.Material = "Plastic"
-        v.Reflectance = 0
-    elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
-        v.Transparency = 1
-    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
-        v.Lifetime = NumberRange.new(0)
-    elseif v:IsA("Explosion") then
-        v.BlastPressure = 1
-        v.BlastRadius = 1
-    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
-        v.Enabled = false
-    elseif v:IsA("MeshPart") then
-        v.Material = "Plastic"
-        v.Reflectance = 0
-        v.TextureID = 10385902758728957
-    end
-end
-for i, e in pairs(l:GetChildren()) do
-    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
-        e.Enabled = false
-    end
-end
-end)
 
-task.spawn(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LiverMods/--script/main/Bob"))()
-end)
 
 
   
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/ui%20lib%20fix.lua"))()
+
 
 local BlueScreen = {
         SchemeColor = Color3.fromRGB(10, 82, 240),
@@ -163,9 +122,9 @@ OrbSection:NewToggle("Auto farm Red Orb", "Get The Red Orb 🔴", function(state
 		      game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Magma City")
 		    game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Magma City")
 		 game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Magma City")
-	   game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Magma City")
-	     game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Magma City")
-		   game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Magma City")
+	       game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Magma City")
+	        game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Magma City")
+	 	   game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Magma City")
 		     game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Magma City")
 		       game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Magma City")
 		          game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Magma City")
@@ -188,7 +147,7 @@ OrbSection:NewToggle("Auto farm Red Orb", "Get The Red Orb 🔴", function(state
 		                                            game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","City")
 		                                              game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","City")
 		                                                game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","City")
-                                                          game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Snow City")
+                                                                  game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Snow City")
 		                                                    game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Snow City")
 		                                                      game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Snow City")
 		                                                        game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Snow City")
@@ -204,8 +163,8 @@ OrbSection:NewToggle("Auto farm Red Orb", "Get The Red Orb 🔴", function(state
 		                                            game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Snow City")
 		                                          game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Snow City")
 		                                        game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Snow City")
-		                                    game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Snow City")
-		                                  game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Snow City")
+		                                     game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Snow City")
+		                                   game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Red Orb","Snow City")
    end
 end)
 
@@ -225,8 +184,8 @@ OrbSection:NewToggle("Auto farm Blue Orb", "Get The Red Orb 🔵", function(stat
 		      game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Magma City")
 		    game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Magma City")
 		 game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Magma City")
-	   game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Magma City")
-	     game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Magma City")
+	        game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Magma City")
+	         game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Magma City")
 		   game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Magma City")
 		     game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Magma City")
 		       game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Magma City")
@@ -250,7 +209,7 @@ OrbSection:NewToggle("Auto farm Blue Orb", "Get The Red Orb 🔵", function(stat
 		                                            game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","City")
 		                                              game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","City")
 		                                                game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","City")
-                                                          game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Snow City")
+                                                                  game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Snow City")
 		                                                    game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Snow City")
 		                                                      game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Snow City")
 		                                                        game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Snow City")
@@ -266,8 +225,8 @@ OrbSection:NewToggle("Auto farm Blue Orb", "Get The Red Orb 🔵", function(stat
 		                                            game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Snow City")
 		                                          game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Snow City")
 		                                        game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Snow City")
-		                                    game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Snow City")
-		                                  game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Snow City")
+		                                     game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Snow City")
+		                                   game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Snow City")
    end
 end)
 
@@ -287,8 +246,8 @@ OrbSection:NewToggle("Auto farm Orange Orb", "Get The Red Orb 🟠", function(st
 		      game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Magma City")
 		    game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Magma City")
 		 game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Magma City")
-	   game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Magma City")
-	     game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Magma City")
+	        game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Magma City")
+	         game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Magma City")
 		   game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Magma City")
 		     game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Magma City")
 		       game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Magma City")
@@ -312,7 +271,7 @@ OrbSection:NewToggle("Auto farm Orange Orb", "Get The Red Orb 🟠", function(st
 		                                            game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","City")
 		                                              game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","City")
 		                                                game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","City")
-                                                          game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
+                                                                  game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
 		                                                    game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
 		                                                      game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
 		                                                        game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
@@ -328,10 +287,21 @@ OrbSection:NewToggle("Auto farm Orange Orb", "Get The Red Orb 🟠", function(st
 		                                            game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
 		                                          game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Blue Orb","Snow City")
 		                                        game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
-		                                    game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
-		                                  game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
+		                                     game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
+		                                   game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
    end
 end)
+
+OrbSection:NewToggle("Auto farm Yellow Orb {Buggy Pet}", "used to bug pet", function(state)
+	_G.Farm = (state and true or false)
+	wait()
+	while _G.Farm == true do
+		wait()
+local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) 
+  end
+end)
+
+
 
 --[ "Botões" e "toggles" do "OthSection" ] 
     OthSection:NewButton("F3X ( TOOL )", "and useful", function()
@@ -343,6 +313,52 @@ end)
     OthSection:NewButton("Infinite Yield", "admins command", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
     end)     
+    OthSection:NewButton("Anti - lag", "reduces lag", function()
+task.spawn(function()
+local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+local g = game
+local w = g.Workspace
+local l = g.Lighting
+local t = w.Terrain
+t.WaterWaveSize = 0
+t.WaterWaveSpeed = 0
+t.WaterReflectance = 0
+t.WaterTransparency = 0
+l.GlobalShadows = false
+l.FogEnd = 9e9
+l.Brightness = 0
+settings().Rendering.QualityLevel = "Level01"
+for i, v in pairs(g:GetDescendants()) do
+    if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+    elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+        v.TextureID = 10385902758728957
+    end
+end
+for i, e in pairs(l:GetChildren()) do
+    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+        e.Enabled = false
+    end
+  end
+end)
+
+task.spawn(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LiverMods/--script/main/Bob"))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/littlegui/main/FPS-Counter'))()
+ end)
+end)     
  OthSection:NewButton("Keyboard", "And Used A Lot On Mobile", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
     end)    
@@ -350,11 +366,7 @@ OthSection:NewButton("Fly Gui ", "Gui Fly made by me", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/TGxqcQdY", true))()
 end)
            
-    OthSection:NewButton("Fly Car Gui", "car flights, support for all executors Mobiles", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/LiverMods/ModsScriptsGames-/main/FlyCar'))()
-    end)    
-
-    OthSection:NewKeybind("Press T to get TpTool", "use to teleport", Enum.KeyCode.T, function()
+      OthSection:NewKeybind("Press T to get TpTool", "use to teleport", Enum.KeyCode.T, function()
 	mouse = game.Players.LocalPlayer:GetMouse()
 tool = Instance.new("Tool")
 tool.RequiresHandle = false
@@ -366,15 +378,6 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
 end)  
-
-OrbSection:NewToggle("Auto farm Yellow Orb {Buggy Pet}", "used to bug pet", function(state)
-	_G.Farm = (state and true or false)
-	wait()
-	while _G.Farm == true do
-		wait()
-local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) 
-end
-end)
 
 
 HoopSection:NewToggle("Auto Farm Hoops", "👍🏼", function(state)
