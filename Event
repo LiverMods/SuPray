@@ -1,16 +1,16 @@
 local speedDesertBindable = Instance.new('BindableFunction')
 function speedDesertBindable.OnInvoke(state)
 	if state == 'Yes' then
-		game.TeleportService:Teleport(3276265788, player)
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/LiverMods/SuPray/main/Gajw"))()
 	end
 end
 Teleports:AddButton('Speed Desert', function()
 	game.StarterGui:SetCore('SendNotification', {
-		Title = 'confirm to execute',
-		Text = 'Do you want to Load The Script?',
+		Title = 'load the script',
+		Text = 'Want to Load Script. This was created to prevent loading 2 Scripts at once',
 		Duration = math.huge,
 		Callback = speedDesertBindable,
-		Button1 = 'Yes',
-		Button2 = 'No'
+		Button1 = '✅',
+		Button2 = '❌'
 	})
 end)
