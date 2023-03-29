@@ -1,6 +1,6 @@
 local speedDesertBindable = Instance.new('BindableFunction')
 function speedDesertBindable.OnInvoke(state)
-	if state == 'Yes' then
+	if state == '✅' then
  loadstring(game:HttpGet("https://raw.githubusercontent.com/LiverMods/SuPray/main/Gajw"))()
 	end
 end
