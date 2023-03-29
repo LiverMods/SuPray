@@ -1,9 +1,33 @@
+--[ variable ]
+local codes = game.ReplicatedStorage.rEvents.codeRemote
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+local antiAFK = true
+player.Idled:connect(function()
+	if antiAFK then
+		game.VirtualUser:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+		wait(1)
+		game.VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+	end
+end)
+task.spawn(function()
+    while true do
+    codes:InvokeServer('hyper250')
+	codes:InvokeServer('legends500')
+	codes:InvokeServer('launch200')
+	codes:InvokeServer('sparkles300')
+	codes:InvokeServer('sprint250')
+	codes:InvokeServer('speedchampion000')
+	codes:InvokeServer('racer300') task.wait(220)
+  end
+end)
 
+--[ create library ]
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/ui%20lib%20fix.lua"))()
 
 
 local BlueScreen = {
-        SchemeColor = Color3.fromRGB(10, 82, 240),
+        SchemeColor = Color3.fromRGB(20, 92, 240),
         Background = Color3.fromRGB(22, 22, 22),
         Header = Color3.fromRGB(5, 5, 5),
         TextColor = Color3.fromRGB(168, 255, 246),
@@ -279,13 +303,31 @@ OrbSection:NewToggle("Teleport the Orb for you", "very good", function(state)
 	end
 end)
 
-
+game.ReplicatedStorage.raceInProgress.Changed:Connect(function(state)
+	if not getgenv().AutoRace then return end
+	if state then
+		game.ReplicatedStorage.rEvents.raceEvent:FireServer('joinRace')
+		wait()
+		player.PlayerGui.gameGui.raceJoinLabel.Visible = false
+	end
+end)
+game.ReplicatedStorage.raceStarted.Changed:Connect(function(state)
+	if not getgenv().AutoRace then return end
+	if state then
+		for i, v in pairs(workspace.raceMaps:GetChildren()) do
+			local oldFinishPosition = v.finishPart.CFrame
+			v.finishPart.CFrame = player.Character.HumanoidRootPart.CFrame
+			wait()
+			v.finishPart.CFrame = oldFinishPosition
+		end
+	end
+end)
 OrbSection:NewToggle("Auto Race", "Earn Instantly", function(state)
 	getgenv().AutoRace = state
 end)
 
 
-OrbSection:NewToggle("Auto farm Yellow Orb {Buggy Pet}", "used to bug pet", function(state)
+OrbSection:NewToggle("Auto farm Yellow Orb", "used to bug pet", function(state)
 	_G.Farm = (state and true or false)
 	wait()
 	while _G.Farm == true do
