@@ -13,7 +13,7 @@ local BlueScreen = {
 
 
 --[ Nome, Cor ] 
-local Window = Library.CreateLib("{ I - SuPray } Speed of Legends ", BlueScreen)
+local Window = Library.CreateLib("{ II - SuPray } Speed of Legends ", BlueScreen)
 
 
 
@@ -242,7 +242,7 @@ OrbSection:NewToggle("Auto farm Orange Orb", "Get The Red Orb 🟠", function(st
 		                                            game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","City")
 		                                              game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","City")
 		                                                game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","City")
-                                                                  game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
+                                                         game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
 		                                                    game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
 		                                                      game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
 		                                                        game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
@@ -262,6 +262,28 @@ OrbSection:NewToggle("Auto farm Orange Orb", "Get The Red Orb 🟠", function(st
 		                                   game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Snow City")
    end
 end)
+
+OrbSection:NewToggle("Teleport the Orb for you", "very good", function(state)
+	getgenv().AutoSpawners = state
+	while true do
+		if not getgenv().AutoSpawners then return end
+		wait()
+		for i, v in pairs(workspace.orbFolder[player.currentMap.Value]:GetChildren()) do
+			if v:FindFirstChildOfClass('MeshPart') then
+				v.outerGem.CFrame = player.Character.HumanoidRootPart.CFrame
+			end
+			if v:FindFirstChildOfClass('Part') then
+				v.outerOrb.CFrame = player.Character.HumanoidRootPart.CFrame
+			end
+		end
+	end
+end)
+
+
+OrbSection:NewToggle("Auto Race", "Earn Instantly", function(state)
+	getgenv().AutoRace = state
+end)
+
 
 OrbSection:NewToggle("Auto farm Yellow Orb {Buggy Pet}", "used to bug pet", function(state)
 	_G.Farm = (state and true or false)
