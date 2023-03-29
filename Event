@@ -1,33 +1,16 @@
-   game.StarterGui:SetCore("SendNotification", {
-	Title = "LOADING";
-	Text = "...";
-    Duration = 2; }) task.wait(2)
-    
-    --[ Logs Main(Principal Cod) ] 
-    
-spawn(function()
-if game.PlaceId == 3101667897 then
-
-spawn(function()
-wait(0) local Sound = Instance.new("Sound",game:GetService("SoundService")) Sound.SoundId = "rbxassetid://851699118" Sound:Play()
-end)
-
-    game.StarterGui:SetCore("SendNotification", {
-	Title = "By Liver zMods";
-	Text = "created by Brazilian!";
-    Icon = "rbxthumb://type=Asset&id=11935866652&w=150&h=150";
-    Duration = 0.5; }) wait(1)
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LiverMods/SuPray/main/legends"))()
-else
-local Sound = Instance.new("Sound",game:GetService("SoundService"))
-Sound.SoundId = "rbxassetid://2323663829"
-Sound:Play()
-
-game.StarterGui:SetCore("SendNotification", {
-	Title = "Error";
-	Text = "outdated script";
-    Duration = 260;
-})
+local speedDesertBindable = Instance.new('BindableFunction')
+function speedDesertBindable.OnInvoke(state)
+	if state == 'Yes' then
+		game.TeleportService:Teleport(3276265788, player)
+	end
 end
+Teleports:AddButton('Speed Desert', function()
+	game.StarterGui:SetCore('SendNotification', {
+		Title = 'confirm to execute',
+		Text = 'Do you want to Load The Script?',
+		Duration = math.huge,
+		Callback = speedDesertBindable,
+		Button1 = 'Yes',
+		Button2 = 'No'
+	})
 end)
